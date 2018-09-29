@@ -4,15 +4,15 @@
 
 - change the package name in the ``` package.json ``` file
 
-- Install dependencies with ``` yarn ``` or ``` npm install ```
+- Install dependencies with ``` rm -rf node_modules && npm install ```
 
 - Create your design elements, patterns and templates
 
-- Compile the production design system with ``` yarn run build:system ``` or ``` npm run build:system ```
+- Compile the production design system with ``` npm run build:system ```
 
-- install your created design system into your nuxt.js project with ``` yarn add file:[path-to-your-design-system] ``` or ``` npm install --save file:[path-to-your-design-system] ```
+- install your created design system into your nuxt.js project with ``` npm install --save file:[path-to-your-design-system] ```
 
-- in your nuxt.js project, create a new file at: ``` plugins/designsystem.js ```
+- in your nuxt.js project, create a new file at: ``` plugins/design-system.js ```
 
 ``` js
 import Vue from 'vue'
@@ -21,11 +21,11 @@ import 'vue-design-system/dist/system.css'
 
 Vue.use(system)
 ```
-- Import this plugin in the nuxt.config.js file: 
+- Import this plugin in the nuxt.config.js file:
 
 ``` js
 plugins: [
-    { src: '~/plugins/designsystem', ssr: false }
+  src: '~/plugins/designsystem'
 ]
 ```
 
