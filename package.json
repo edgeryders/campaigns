@@ -1,5 +1,5 @@
 {
-  "name": "nuxt",
+  "name": "vue-design-system-with-nuxt",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -9,6 +9,9 @@
   "dependencies": {
     "dotenv": "^6.0.0",
     "nuxt": "^2.0.0",
-    "vue-design-system": "file:../vue-design-system"
+    "vue": "=2.5.16",
+    "vue-design-system": "file:../vue-design-system",
+    "vue-server-renderer": "=2.5.16",
+    "vue-template-compiler": "=2.5.16"
   }
 }

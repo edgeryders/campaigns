@@ -1,32 +1,41 @@
-# Install vue-design-system into nuxt.js
+# Using Vue Design System as an NPM Dependency on Nuxt project (BETA!)
 
-- Clone [https://github.com/viljamis/vue-design-system](https://github.com/viljamis/vue-design-system)
+### Testing things locally:
 
-- change the package name in the ``` package.json ``` file
+1. Switch to your vueds project and change `libraryTarget` setting in `config/index.js` to `commonjs2`.
 
-- Install dependencies with ``` rm -rf node_modules && npm install ```
+2. Now build your design system for production by running `npm run build:system` inside the vueds project.
 
-- Create your design elements, patterns and templates
+3. After done, switch to this project and run first `rm -rf node_modules` to make sure the temporary local installation won’t cause issues.
 
-- Compile the production design system with ``` npm run build:system ```
+4. Now install the system locally by running `npm install --save file:/Users/viljamis/code/vue-design-system` (modify the path to match your own system).
 
-- install your created design system into your nuxt.js project with ``` npm install --save file:[path-to-your-design-system] ```
+5. Once you’ve installed the design system, run `npm install` to install the rest of the dependencies.
 
-- in your nuxt.js project, create a new file at: ``` plugins/design-system.js ```
+6. In your nuxt.js project, create a new file at `plugins/design-system.js`:
 
-``` js
-import Vue from 'vue'
-import system from 'vue-design-system'
-import 'vue-design-system/dist/system.css'
+  ``` js
+  import Vue from 'vue'
+  import system from 'vue-design-system'
+  import 'vue-design-system/dist/system.css'
 
-Vue.use(system)
-```
-- Import this plugin in the nuxt.config.js file:
+  Vue.use(system)
+  ```
 
-``` js
-plugins: [
-  src: '~/plugins/designsystem'
-]
-```
+7. Import this plugin in the nuxt.config.js file:
 
-Now you can use your design system within your nuxt project
+  ``` js
+  plugins: [
+    src: '~/plugins/designsystem'
+  ]
+  ```
+
+8. Now you can run `npm run dev` to test that your design system build and its components work.
+
+9. If everything works you should probably move your system to a private GitHub repository and do the NPM install directly from that repo.
+
+## Things to keep in mind:
+
+* Vue Design System can’t be currently imported to a project using [Vue 2.5.17+](https://github.com/vuejs/vue/releases/tag/v2.5.17-beta.0) due to some breaking changes they’ve introduced, so you need to use 2.5.16 or below for now. This will get hopefully fixed later on.
+
+* This is a beta demo as VueDS is not fully compatible yet, it will throw a couple of errors, but everything should still more or less be testable.
