@@ -11,6 +11,7 @@
     "nuxt": "^2.0.0",
     "vue": "^2.5.17",
     "vue-design-system": "file:../vue-design-system",
+    "vue-server-renderer": "^2.5.17",
     "vue-template-compiler": "^2.5.17"
   }
 }
