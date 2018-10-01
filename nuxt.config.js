@@ -1,5 +1,5 @@
 require('dotenv').config();
 
 module.exports = {
-  plugins: ['~/plugins/design-system'],
+  plugins: ['~/plugins/design-system']
 }
