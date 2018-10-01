@@ -24,7 +24,7 @@
 
   Vue.use(DesignSystem)
   ```
-7. Import this plugin in the nuxt.config.js file:
+7. Import this plugin in the nuxt.config.js file (you can remote the `ssr: false` part if you build your library as a `commonjs2` module):
   ``` js
   plugins: [{
     src: '~/plugins/design-system', ssr: false
