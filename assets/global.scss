@@ -1,0 +1,13 @@
+@import "~ER-design-system/dist/system/tokens/tokens.scss";
+@import "~ER-design-system/dist/system/system.utils.scss";
+
+body {
+  @include reset;
+  font-family: $font-text;
+  font-weight: $weight-normal;
+  font-size: $size-m;
+  line-height: $line-height-m;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+}
